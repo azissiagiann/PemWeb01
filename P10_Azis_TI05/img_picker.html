@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+
+<body>
+    <select name="dropdown_img" id="dropdown_img" onchange="gambar()">
+        <option hidden>- - - P i l i h   G a m b a r - - -</option>
+        <option value="gorila">Gorila</option>
+        <option value="singa">Singa</option>
+        <option value="elang">Elang</option>
+    </select>
+    <br />
+    <img alt="gambar" id="image" />
+
+    <script>
+        function gambar() {
+            let drop_img = document.getElementById("dropdown_img").value;
+            let image = document.getElementById("image");
+
+            if (drop_img == "gorila") {
+                image.setAttribute(
+                    "src",
+                    "https://www.wwf.org.uk/get-involved/schools/calendar/world-gorilla-day"
+                );
+                alert("ini gambar gorila")
+            }else if (drop_img == "singa") {
+                image.setAttribute(
+                    "src",
+                    "https://id.wikipedia.org/wiki/Singa"
+                );
+                alert("ini gambar singa");
+            }else if (drop_img == "elang") {
+                image.setAttribute(
+                    "src",
+                    "https://www.kompasiana.com/mf-rozi/571aa2aa6c7a61ea0d06c0d9/belajar-sukses-dari-burung-elang"
+                );
+                alert ("ini gambar elang")
+            }
+        }
+    </script>
+</body>
+
+</html
